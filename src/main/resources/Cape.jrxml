@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NewFullReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5ca88d22-070a-43dc-bd18-11e181b44d8a">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="projeto" class="java.lang.String"/>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="capa" class="java.lang.String"/>
+	<title>
+		<band height="583" splitType="Stretch">
+			<image scaleImage="RealHeight" hAlign="Center">
+				<reportElement positionType="Float" x="0" y="0" width="555" height="580" uuid="b9a4e38e-e150-4599-83e6-0d19e168533f"/>
+				<imageExpression><![CDATA[net.sf.jasperreports.engine.util.JRImageLoader.getInstance(new SimpleJasperReportsContext()).loadAwtImageFromBytes(javax.xml.bind.DatatypeConverter.parseBase64Binary($F{capa}))]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="145" y="249" width="195" height="30" uuid="164bf307-b382-4058-8f4c-f19c18104885"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projeto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="145" y="277" width="195" height="30" uuid="bbcac9f5-a0b2-4afd-84f7-6d4cd0dff30e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>
